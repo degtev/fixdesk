@@ -1,0 +1,235 @@
+.profile-page {
+  min-height: 100vh;
+  background-color: var(--bg-primary-page);
+}
+
+.profile-header {
+  background-color: var(--bg-header);
+  border-bottom: 1px solid #1B1F29;
+  padding: 13px 0;
+}
+
+.profile-header-content {
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 0 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.profile-logout-button {
+  padding: 16px 24px;
+  background: transparent;
+  border: none;
+  border-radius: 8px;
+  color: var(--text-secondary);
+  font-size: 14px;
+  font-weight: 400;
+  text-align: left;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-top: 8px;
+  border-top: 1px solid var(--border);
+  padding-top: 24px;
+}
+
+.profile-logout-button:hover {
+  background-color: rgba(239, 68, 68, 0.05);
+  color: var(--error);
+}
+
+.profile-header-avatar {
+  position: relative;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  overflow: visible;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  border:2px solid rgba(100, 103, 242, 0.7);
+}
+
+.profile-header-avatar:hover {
+
+}
+
+.profile-header-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  transition: border-color 0.2s ease;
+}
+
+.profile-header-avatar:hover img {
+}
+
+.profile-loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  color: var(--text-secondary);
+}
+
+.profile-container {
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 40px;
+}
+
+.profile-title {
+  font-size: 32px;
+  font-weight: 600;
+  margin-bottom: 40px;
+  color: var(--text-primary);
+}
+
+.profile-layout {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 40px;
+}
+
+.profile-tabs {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.profile-tab {
+  padding: 16px 24px;
+  background: transparent;
+  border: none;
+  border-radius: 8px;
+  color: var(--text-secondary);
+  font-size: 14px;
+  font-weight: 400;
+  text-align: left;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.profile-tab:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+  color: var(--text-primary);
+}
+
+.profile-tab.active {
+  background-color: rgba(255, 255, 255, 0.05);
+  color: var(--text-primary);
+}
+
+.profile-content {
+  width: 100%;
+}
+
+.profile-card {
+  background-color: var(--bg-header);
+  border-radius: 10px;
+  padding: 24px;
+  width: 100%;
+  max-width:280px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  border: 1px solid #1B1F29;
+}
+.profile-card-info {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+.profile-card-avatar {
+  width: 106px;
+  height: 106px;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 24px;
+  border: 1px solid #1B1F29;
+}
+
+.profile-card-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.profile-card-name {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.profile-card-position {
+  font-size: 14px;
+  color: var(--text-secondary);
+}
+
+.profile-card-email {
+  font-size: 14px;
+  color: var(--text-secondary);
+}
+
+.profile-logout-btn {
+  padding: 12px 32px;
+  background: transparent;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  color: var(--text-primary);
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  width:100%;
+  margin-top:20px
+}
+
+.profile-logout-btn:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+  border-color: var(--text-secondary);
+}
+
+@media (max-width: 1024px) {
+  .profile-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .profile-tabs {
+    flex-direction: row;
+    overflow-x: auto;
+  }
+
+  .profile-content {
+    justify-content: center;
+  }
+  .profile-logout-btn{
+    display:none;
+  }
+}
+
+@media (max-width: 768px) {
+  .profile-container {
+    padding: 20px;
+  }
+
+  .profile-header-content {
+    padding: 0 20px;
+  }
+
+  .profile-card {
+    width: 100%;
+    max-width: 400px;
+  }
+}
+
+@media (max-width: 450px) {
+  .profile-tabs{
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" baseProfile="tiny-ps" viewBox="0 0 512 512">
+    <title>FixDesk Logo</title>
+    <rect width="512" height="512" fill="#4E55E8"/>
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M359.226 152.774C302.11 152.774 256 198.884 256 255.999C256 313.116 302.11 359.226 359.226 359.226C416.342 359.226 462.452 313.116 462.452 255.999C462.452 198.884 416.342 152.774 359.226 152.774Z" fill="white"/>
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M152.774 359.226C209.89 359.226 255.999 313.116 255.999 255.999C255.999 198.884 209.89 152.774 152.774 152.774V359.226Z" fill="white"/>
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M49.5484 359.226C106.664 359.226 152.774 313.116 152.774 255.999C152.774 198.884 106.664 152.774 49.5484 152.774V204.237C78.0348 204.237 101.31 227.513 101.31 255.999C101.31 284.486 78.0348 307.762 49.5484 307.762V359.226Z" fill="white"/>
+</svg>

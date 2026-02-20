@@ -1,0 +1,57 @@
+@import '../components/Tooltip/index.css';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-primary: #16161A;
+  --bg-primary-page: #13161F;
+  --bg-secondary: rgba(255, 255, 255, 0.05);
+  --bg-header: #161923;
+ --bg-input: #0B0B13;
+  --input-border: #282B34;
+  --text-primary: #dee1ea;
+ --text-secondary: #a8aec7;
+  --text-placeholder: #7C7C7C;
+ --accent: #6366f1;
+  --accent-hover: #4f46e5;
+  --btn-hover: rgba(100,103,242,0.7);
+  --border: #404040;
+  --error: #EF4444;
+  --error-dark: #DC2626;
+  --success: #10b981;
+}
+
+body {
+  font-family: 'Roboto',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  min-height: 100vh;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+button {
+  font-family: inherit;
+}
+
+input {
+  font-family: inherit;
+}

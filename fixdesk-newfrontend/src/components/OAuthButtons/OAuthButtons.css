@@ -1,0 +1,53 @@
+.oauth-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+}
+
+.oauth-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 12px 16px;
+  background-color: var(--bg-input);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  color: var(--text-primary);
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  width: 100%;
+}
+
+.oauth-btn:hover {
+  background-color: #404040;
+  transform: translateY(-1px);
+}
+
+.oauth-btn:active {
+  transform: translateY(0);
+}
+
+.oauth-btn svg {
+  flex-shrink: 0;
+}
+
+.oauth-btn-google {
+  color: #4285F4;
+}
+
+.oauth-btn-yandex {
+  color: #FC3F1D;
+}
+
+.oauth-btn-github {
+  color: #ffffff;
+}
+
+.oauth-btn-telegram {
+  color: #2AABEE;
+}
+

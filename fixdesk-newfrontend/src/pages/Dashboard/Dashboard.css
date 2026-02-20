@@ -1,0 +1,29 @@
+.dashboard-page {
+  display: flex;
+  height: 100vh;
+ background-color: var(--bg-primary-page);
+}
+
+.main-content {
+  flex-grow: 1;
+  padding: 30px;
+  overflow-y: auto;
+}
+
+.create-dashboard-modal {
+  padding: 0px;
+  display:flex;
+  flex-direction: column;
+  gap:15px;
+}
+
+.create-dashboard-modal .input-group {
+  margin-bottom: 15px;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 20px;
+}

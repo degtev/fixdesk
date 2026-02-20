@@ -1,0 +1,425 @@
+.profile-settings {
+  width: 100%;
+}
+
+.deleted-account-banner {
+  display: flex;
+  gap: 16px;
+  padding: 16px;
+  background-color: rgba(239, 68, 68, 0.1);
+  border: 2px solid var(--error);
+  border-radius: 8px;
+  margin-bottom: 24px;
+  animation: slideDown 0.3s ease;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.deleted-account-icon {
+  flex-shrink: 0;
+}
+
+.deleted-account-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.deleted-account-text h4 {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--error);
+  margin: 0 0 8px 0;
+}
+
+.deleted-account-text p {
+  font-size: 14px;
+  color: var(--text-primary);
+  margin: 0;
+  line-height: 1.5;
+}
+
+.deleted-account-text strong {
+  color: var(--error);
+  font-weight: 600;
+}
+
+.restore-account-btn {
+  align-self: flex-start;
+  background-color: var(--accent) !important;
+  border-color: var(--accent) !important;
+  padding: 10px 20px !important;
+}
+
+.restore-account-btn:hover:not(:disabled) {
+  background-color: var(--accent-hover) !important;
+}
+
+.profile-settings-message {
+  padding: 12px 16px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.profile-settings-message.success {
+  background-color: rgba(34, 197, 94, 0.1);
+  color: #22c55e;
+  border: 1px solid rgba(34, 197, 94, 0.3);
+}
+
+.profile-settings-message.error {
+  background-color: rgba(239, 68, 68, 0.1);
+  color: #ef4444;
+  border: 1px solid rgba(239, 68, 68, 0.3);
+}
+
+.profile-settings-section {
+  margin-bottom: 32px;
+  padding-bottom: 32px;
+  border-bottom: 1px solid var(--input-border);
+}
+
+
+.profile-settings-section-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0 0 16px 0;
+}
+
+/* Avatar Upload */
+.avatar-upload-section {
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+  margin-bottom: 32px;
+  padding-bottom: 32px;
+  border-bottom: 1px solid var(--input-border);
+}
+
+.avatar-preview {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.avatar-preview img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.avatar-upload-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.avatar-upload-spinner {
+  width: 32px;
+  height: 32px;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-top-color: white;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.avatar-upload-actions {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.avatar-file-input {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.avatar-upload-label {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: var(--accent);
+  color: white;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  width: fit-content;
+  text-align: center;
+}
+
+.avatar-upload-label:hover:not(:disabled) {
+  background-color: var(--accent-hover);
+}
+
+.avatar-file-input:disabled + .avatar-upload-label {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.avatar-upload-hint {
+  font-size: 13px;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+.profile-settings-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.profile-settings-hint {
+  font-size: 13px;
+  color: var(--text-secondary);
+  margin: 8px 0 0 0;
+}
+
+.profile-settings-loading {
+  text-align: center;
+  padding: 20px;
+  color: var(--text-secondary);
+  font-size: 14px;
+}
+
+/* Social Accounts */
+.social-accounts-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.social-account-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 7px 16px;
+  background-color: transparent;
+  border: 1px solid #1B1F29;
+  border-radius: 8px;
+  transition: border-color 0.2s ease;
+}
+
+.social-account-item:hover {
+  border-color: var(--accent);
+}
+
+.social-account-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.social-account-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+}
+
+.social-account-icon svg {
+  width: 24px;
+  height: 24px;
+}
+
+.social-account-name {
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.social-account-status {
+  font-size: 13px;
+  color: var(--text-secondary);
+  padding: 4px 8px;
+  background-color: rgba(100, 103, 242, 0.1);
+  border-radius: 4px;
+}
+
+.social-account-btn {
+  min-width: 100px;
+}
+
+/* Telegram Info */
+.telegram-info {
+  background-color: rgba(100, 103, 242, 0.05);
+  border: 1px solid rgba(100, 103, 242, 0.2);
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.telegram-info-text {
+  font-size: 14px;
+  color: var(--text-primary);
+  margin: 0 0 12px 0;
+  line-height: 1.5;
+}
+
+.telegram-info-text:last-child {
+  margin-bottom: 0;
+}
+
+.telegram-info-text code {
+  background-color: var(--bg-input);
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-family: 'Courier New', monospace;
+  font-size: 13px;
+  color: var(--accent);
+}
+
+/* Danger Zone */
+.danger-zone {
+  background-color: rgba(239, 68, 68, 0.05);
+  border: 1px solid rgba(239, 68, 68, 0.2) !important;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.profile-settings-danger-text {
+  font-size: 14px;
+  color: var(--text-secondary);
+  margin: 0 0 16px 0;
+  line-height: 1.5;
+}
+
+.delete-account-btn {
+  background-color: var(--error) !important;
+  border-color: var(--error) !important;
+}
+
+.delete-account-btn:hover:not(:disabled) {
+  background-color: var(--error-dark) !important;
+}
+
+/* Delete Modal */
+.delete-modal-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.delete-modal-warning {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 8px;
+}
+
+.delete-modal-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--text-primary);
+  text-align: center;
+  margin: 0;
+}
+
+.delete-modal-info {
+  background-color: rgba(239, 68, 68, 0.05);
+  border: 1px solid rgba(239, 68, 68, 0.2);
+  border-radius: 8px;
+  padding: 16px;
+}
+
+.delete-modal-info p {
+  font-size: 14px;
+  color: var(--text-primary);
+  margin: 0 0 12px 0;
+  line-height: 1.5;
+}
+
+.delete-modal-info ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 16px 0;
+}
+
+.delete-modal-info li {
+  font-size: 14px;
+  color: var(--text-secondary);
+  padding: 6px 0 6px 24px;
+  position: relative;
+  line-height: 1.5;
+}
+
+.delete-modal-info li::before {
+  content: "•";
+  position: absolute;
+  left: 8px;
+  color: var(--error);
+  font-weight: bold;
+}
+
+.delete-modal-restore {
+  background-color: rgba(100, 103, 242, 0.1);
+  border-left: 3px solid var(--accent);
+  padding: 12px;
+  border-radius: 4px;
+  font-size: 13px;
+  color: var(--text-secondary);
+  margin: 16px 0 0 0 !important;
+}
+
+.delete-modal-confirm {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.delete-modal-confirm-label {
+  font-size: 14px;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.delete-modal-actions {
+  display: flex;
+  gap: 12px;
+  justify-content: flex-end;
+  padding-top: 8px;
+}
+
+.delete-modal-actions button {
+  min-width: 120px;
+}
+
+.avatar-upload-btns{
+  display:flex;
+  gap:10px;
+}
+@media(max-width:525px){
+  .avatar-upload-btns{
+    flex-direction: column;
+  }
+}
